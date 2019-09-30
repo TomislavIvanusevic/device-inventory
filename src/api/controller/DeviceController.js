@@ -1,21 +1,13 @@
 import deviceModel from '../model/DeviceModel';
 
-module.exports = {
-  create(req, res, next) {
-    deviceModel.create(
-      {
-        name: req.body.name,
-        imei: req.body.imei,
-        location: req.body.location,
-      },
-      (err, result) => {
-        if (err) {
-          next(err);
-        } else {
-          res.json({ status: 'success', message: result, data: null });
-        }
-      },
-    );
+export default {
+  async create(req, res, next) {
+    try {
+      const data = await deviceModel.create({ ...req.body });
+      res.status(200).json({ status: 'success' });
+    } catch (err) {
+      next(err);
+    }
   },
   async get(req, res) {
     try {

@@ -18,6 +18,11 @@ const DeviceSchema = new Schema({
     trim: false,
     required: true,
   },
+  //   locationId: {
+  //     type: String,
+  //     trim: false,
+  //     required: true,
+  //   },
   spec: {
     type: String,
     trim: true,

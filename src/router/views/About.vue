@@ -8,9 +8,9 @@
 import Layout from '../layouts/Main.vue';
 
 export default {
-    name: 'home',
-    components: {
-        Layout,
-    },
+  name: 'home',
+  components: {
+    Layout,
+  },
 };
 </script>

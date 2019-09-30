@@ -17,11 +17,11 @@ export default {
     Table,
   },
   beforeRouteEnter(to, from, next) {
-        Promise.all([
-            store.dispatch('devices/fetchDevices'),
-        ]).then(() => {
-            next();
-        });
-    },
+    Promise.all([
+      store.dispatch('devices/fetchDevices'),
+    ]).then(() => {
+      next();
+    });
+  },
 };
 </script>

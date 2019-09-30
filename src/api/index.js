@@ -8,6 +8,8 @@ import routes from './routes';
 const app = express();
 const port = 8081;
 mongoose.Promise = global.Promise;
+mongoose.set('useFindAndModify', false);
+mongoose.set('useNewUrlParser', true);
 mongoose.connect('mongodb://localhost:27017/device').then(
   () => {
     console.log('Database connection is successful');

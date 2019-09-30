@@ -9,10 +9,10 @@ import Layout from '../layouts/Main.vue';
 import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
-    name: 'home',
-    components: {
-        HelloWorld,
-        Layout,
-    },
+  name: 'home',
+  components: {
+    HelloWorld,
+    Layout,
+  },
 };
 </script>
