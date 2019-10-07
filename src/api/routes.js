@@ -3,8 +3,9 @@ import deviceController from './controller/DeviceController';
 
 const router = Router();
 
-router.post('/create', deviceController.create);
+router.post('/device', deviceController.create);
 router.get('/devices', deviceController.get);
+router.delete('/device/:device_id', deviceController.deleteDevice);
 router.get('/device/:device_id', deviceController.getDevice);
 router.put('/device/:device_id', deviceController.updateDevice);
 

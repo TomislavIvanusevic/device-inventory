@@ -4,7 +4,7 @@ export default {
   async create(req, res, next) {
     try {
       const data = await deviceModel.create({ ...req.body });
-      res.status(200).json({ status: 'success' });
+      res.status(201).json({ status: 'success' }, data);
     } catch (err) {
       next(err);
     }
@@ -27,8 +27,17 @@ export default {
   },
   async updateDevice(req, res) {
     try {
-      console.log(req.params.device_id, 'id');
-      const data = await deviceModel.findOneAndUpdate(req.params.device_id, req.body, { new: true });
+      const data = await deviceModel.findOneAndUpdate(
+        req.params.device_id, req.body, { new: true },
+      );
+      res.status(200).send(data);
+    } catch (err) {
+      throw err;
+    }
+  },
+  async deleteDevice(req, res) {
+    try {
+      const data = await deviceModel.findByIdAndDelete(req.params.device_id);
       res.status(200).send(data);
     } catch (err) {
       throw err;

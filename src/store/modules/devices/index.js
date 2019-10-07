@@ -3,6 +3,8 @@ import actions from './actions';
 
 const state = {
   devices: [],
+  editedDevice: null,
+  isModalOpen: false,
 };
 
 const getters = {

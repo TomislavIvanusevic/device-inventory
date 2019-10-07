@@ -10,7 +10,7 @@ const ApiService = {
   },
 
   setHeader() {
-    Vue.axios.defaults.headers.common['Content-Type'] = 'application/json';
+    Vue.axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
   },
 
   query(resource, params) {

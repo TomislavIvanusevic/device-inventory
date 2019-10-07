@@ -1,13 +1,12 @@
 <template>
   <Layout>
-    <h1>This is an abesdfout page</h1>
     <Table />
   </Layout>
 </template>
 
 <script>
 import Layout from '../layouts/Main.vue';
-import Table from '@/components/Table.vue';
+import Table from '@/components/devices/Table.vue';
 import store from '@/store';
 
 export default {

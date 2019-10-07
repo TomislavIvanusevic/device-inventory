@@ -19,7 +19,9 @@ mongoose.connect('mongodb://localhost:27017/device').then(
   },
 );
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.use('/api', routes);
 app.listen(port, () => {
   console.log(`Server is running on PORT ${port}`);
